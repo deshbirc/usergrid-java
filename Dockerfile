@@ -17,8 +17,8 @@ RUN \
   apt-get update && \
   apt-get -y upgrade && \
   apt-get install -y software-properties-common byobu curl git htop unzip vim wget && \
-  echo 'America/New_York' > /etc/timezone && \
-  dpkg-reconfigure tzdata && \
+  ln -fs /usr/share/zoneinfo/US/Pacific-New /etc/localtime && \
+  dpkg-reconfigure -f noninteractive tzdata \
   rm -rf /var/lib/apt/lists/*
 
 # install oracle java
