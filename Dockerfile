@@ -16,7 +16,7 @@ RUN \
   sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
   apt-get update && \
   apt-get -y upgrade && \
-  apt-get install -y software-properties-common byobu curl git htop unzip vim wget && \
+  apt-get install -y software-properties-common byobu curl git htop unzip vim wget tzdata && \
   ln -fs /usr/share/zoneinfo/US/Pacific-New /etc/localtime && \
   dpkg-reconfigure -f noninteractive tzdata && \
   rm -rf /var/lib/apt/lists/*
