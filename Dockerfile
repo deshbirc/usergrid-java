@@ -18,7 +18,7 @@ RUN \
   apt-get -y upgrade && \
   apt-get install -y software-properties-common byobu curl git htop unzip vim wget && \
   ln -fs /usr/share/zoneinfo/US/Pacific-New /etc/localtime && \
-  dpkg-reconfigure -f noninteractive tzdata \
+  dpkg-reconfigure -f noninteractive tzdata && \
   rm -rf /var/lib/apt/lists/*
 
 # install oracle java
